@@ -4,7 +4,7 @@ module Dictuby
         def initialize
             @default_dict = 'en-sk'
             @config_path = File.expand_path('~') + '/.dictuby'
-            @settings = {}
+            @settings = nil
 
             if File.exists?(@config_path)
                 File.open(@config_path, 'r') do |content|

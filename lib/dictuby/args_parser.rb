@@ -4,12 +4,41 @@ module Dictuby
         def self.parse(args)
             options = {}
 
+            args << '--help' if args.empty?
+
             OptionParser.new do |o|
-                o.on('-h')            { puts o; exit }
-                o.on('-l')            { |b| options[:list] = b }
-                o.on('-g')            { |b| options[:get] = b }
-                o.on('-s DICTIONARY') { |d| options[:set] = d }
-                o.on('QUERY')         { }
+                o.on(
+                    '-h', 
+                    '--help', 
+                    'Display this message'
+                ) do
+                    puts o; exit 
+                end
+
+                o.on(
+                    '-l',
+                    '--list-dicts',
+                    'List available dictionaries'
+                ) do |b|
+                    options[:list] = b
+                end
+
+                o.on(
+                    '-g',
+                    '--get-dict',
+                    'Display current active dictionary'
+                ) do |b|
+                    options[:get] = b
+                end
+
+                o.on(
+                    '-s DICTIONARY',
+                    '--set-dict DICTIONARY',
+                    'Set active dictionary'
+                ) do |d| 
+                    options[:set] = d
+                end
+                o.on('QUERY') {}
                 o.parse!
             end
 

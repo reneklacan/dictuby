@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name        = 'dictuby'
-    s.version     = '0.0.7'
+    s.version     = '0.0.8'
     s.date        = '2013-09-01'
     s.summary     = 'Command line dictionary'
     s.description = 'Command line online dictionary tool written in ruby'
@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
     s.email       = 'rene.klacan@gmail.com'
     s.files       = [
         'lib/dictuby.rb',
+        'lib/dictuby/string.rb',
         'lib/dictuby/online_dictionary.rb',
         'lib/dictuby/sources',
         'lib/dictuby/sources/slovnik_azet_sk.rb',

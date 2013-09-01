@@ -1,0 +1,5 @@
+#!/bin/env ruby20
+
+require 'dictuby'
+
+Dictuby::Runner.execute(ARGV)

@@ -18,11 +18,14 @@ module Dictuby
             'ru-sk' => 'rusko-slovensky',
             'sk-ru' => 'slovensko-rusky',
         }
-        @url = "http://slovnik.azet.sk/preklad/%{dict}/?q=%{query}"
+        @url = 'http://slovnik.azet.sk/preklad/%{dict}/?q=%{query}'
 
         def self.process(page, query)
+            query = I18n.transliterate(query)
             left = page.xpath('//table[1]//span')[0].text rescue nil
+            left = I18n.transliterate(left)
             return [] unless left == query
+
             right = page.xpath(
                 '//table[1]//tr/td[@class="do"]/span'
             ).inject([]) {

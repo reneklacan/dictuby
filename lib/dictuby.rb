@@ -3,6 +3,7 @@ require 'optparse'
 require 'yaml'
 require 'nokogiri'
 require 'open-uri'
+require 'i18n'
 
 require 'dictuby/runner'
 require 'dictuby/args_parser'

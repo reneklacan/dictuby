@@ -21,7 +21,7 @@ or
     git clone https://github.com/simpliplant/dictuby.git
     cd dictuby
     gem build dictuby.gemspec
-    gem install dictuby-0.0.5.gem
+    gem install dictuby-0.0.6.gem
 
 
 Examples

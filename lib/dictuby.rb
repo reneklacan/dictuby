@@ -5,6 +5,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'i18n'
 
+require 'dictuby/string'
 require 'dictuby/runner'
 require 'dictuby/args_parser'
 require 'dictuby/config'

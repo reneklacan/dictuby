@@ -21,9 +21,9 @@ module Dictuby
         @url = 'http://slovnik.azet.sk/preklad/%{dict}/?q=%{query}'
 
         def self.process(page, query)
-            query = I18n.transliterate(query)
+            query = query.normalize
             left = page.xpath('//table[1]//span')[0].text rescue nil
-            left = I18n.transliterate(left)
+            left.normalize!
             return [] unless left == query
 
             right = page.xpath(

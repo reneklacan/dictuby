@@ -17,12 +17,11 @@ module Dictuby
         @url = 'http://slovnik.cz/bin/mld.fpl?vcb=%{query}&dictdir=%{dict}&lines=30&js=0'
 
         def self.process(page, query)
-            query = I18n.transliterate(query)
+            query = query.normalize
             pairs = page.xpath('//div[@class="pair"]')
 
             pairs.inject([]) do |right, pair|
-                left = pair.xpath('span[@class="l"]')[0].text
-                left = I18n.transliterate(left)
+                left = pair.xpath('span[@class="l"]')[0].text.normalize
                 return right if left != query
                 right << pair.xpath('span[@class="r"]')[0].text
             end

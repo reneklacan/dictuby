@@ -38,9 +38,13 @@ module Dictuby
                     p.dicts.keys.each {|d| r[d] = p}; r
                 end
 
-                puts query
-                map[dict].lookup(dict, query).each do |word|
-                    puts "- #{word}"
+                if map.include?(dict)
+                    puts query
+                    map[dict].lookup(dict, query).each do |word|
+                        puts "- #{word}"
+                    end
+                else
+                    puts 'Invalid dictionary'
                 end
             end
         end

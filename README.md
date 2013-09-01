@@ -11,6 +11,19 @@ Synopsis
     -g, --get-dict                   Display current active dictionary
     -s, --set-dict DICTIONARY        Set active dictionary
 
+Installation
+------------
+
+    gem install dictuby
+
+or
+
+    git clone https://github.com/simpliplant/dictuby.git
+    cd dictuby
+    gem build
+    gem install
+
+
 Examples
 --------
     

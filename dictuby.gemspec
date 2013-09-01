@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name        = 'dictuby'
-    s.version     = '0.0.3'
+    s.version     = '0.0.4'
     s.date        = '2013-09-01'
     s.summary     = 'command line online dictionary'
     s.description = 'command line online dictionary'

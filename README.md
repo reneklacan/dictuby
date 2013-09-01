@@ -20,8 +20,8 @@ or
 
     git clone https://github.com/simpliplant/dictuby.git
     cd dictuby
-    gem build
-    gem install
+    gem build dictuby.gemspec
+    gem install dictuby-0.0.5.gem
 
 
 Examples

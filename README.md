@@ -21,7 +21,7 @@ or
     git clone https://github.com/simpliplant/dictuby.git
     cd dictuby
     gem build dictuby.gemspec
-    gem install dictuby-0.0.8.gem
+    gem install dictuby-0.0.9.gem
 
 
 Examples
@@ -33,8 +33,23 @@ List available dictionaries
 
 Set desired dictionary
 
-    dictuby -s en-sk
+    dictuby -s en-es
 
 Translate
 
-    dictuby oblivion
+    dictuby car
+
+Optionally you can tide up and you can disable some unwanted sources so useless disctionaries won't come up on "dictuby -l" command
+
+At first list all dictionary sources
+
+    dictuby -a
+
+And disable unwanted sources
+
+    dictuby -d slovnik.sk
+    dictuby -d slovnik.cz
+
+Sources can be also enabled again
+    
+    dictuby -e slovnik.sk

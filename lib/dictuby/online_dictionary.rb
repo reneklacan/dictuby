@@ -1,6 +1,7 @@
 
 module Dictuby
     class OnlineDictionary
+        @name = ''
         @url = ''
         @dicts = {}
 
@@ -13,6 +14,10 @@ module Dictuby
             page = Nokogiri::HTML(open(url))
 
             self.process(page, query)
+        end
+
+        def self.name
+            @name
         end
 
         def self.dicts

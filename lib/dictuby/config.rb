@@ -15,6 +15,7 @@ module Dictuby
             if !@settings
                 @settings = {}
                 set('dictionary', @default_dict)
+                set('disabled_sources', [])
             end
         end
 

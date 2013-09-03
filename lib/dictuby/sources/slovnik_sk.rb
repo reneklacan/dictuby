@@ -1,16 +1,16 @@
 
 module Dictuby
-    class SlovnikAzetSK < OnlineDictionary
-        @name = 'slovnik.azet.sk'
+    class SlovnikSK < OnlineDictionary
+        @name = 'slovnik.sk'
         @dicts = {
             'en-sk' => 'anglicko-slovensky',
             'sk-en' => 'slovensko-anglicky',
-            'ge-sk' => 'nemecko-slovensky',
-            'sk-ge' => 'slovensko-nemecky',
+            'de-sk' => 'nemecko-slovensky',
+            'sk-de' => 'slovensko-nemecky',
             'fr-sk' => 'francuzsko-slovensky',
             'sk-fr' => 'slovensko-francuzsky',
-            'sp-sk' => 'spanielsko-slovensky',
-            'sk-sp' => 'slovensko-spanielsky',
+            'es-sk' => 'spanielsko-slovensky',
+            'sk-es' => 'slovensko-spanielsky',
             'hu-sk' => 'madarsko-slovensky',
             'sk-hu' => 'slovensko-madarsky',
             'it-sk' => 'taliansko-slovensky',
@@ -23,16 +23,14 @@ module Dictuby
         def self.process(page, query)
             query = query.normalize
             left = page.xpath('//table[1]//span')[0].text rescue nil
-            left.normalize!
+            left.normalize! unless left.nil?
             return [] unless left == query
 
-            right = page.xpath(
+            page.xpath(
                 '//table[1]//tr/td[@class="do"]/span'
             ).inject([]) {
                 |r, e| r << e.text
             }
-
-            right
         end
     end
 end

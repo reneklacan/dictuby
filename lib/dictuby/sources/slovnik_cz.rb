@@ -5,14 +5,14 @@ module Dictuby
         @dicts = {
             'en-cz' => 'encz.en',
             'cz-en' => 'encz.cz',
-            'ge-cz' => 'gecz.ge',
-            'cz-ge' => 'gecz.cz',
+            'de-cz' => 'gecz.ge',
+            'cz-de' => 'gecz.cz',
             'fr-cz' => 'frcz.fr',
             'cz-fr' => 'frcz.cz',
             'it-cz' => 'itcz.it',
             'cz-it' => 'itcz.cz',
-            'sp-cz' => 'spcz.sp',
-            'cz-sp' => 'spcz.cz',
+            'es-cz' => 'spcz.sp',
+            'cz-es' => 'spcz.cz',
         }
         @url = 'http://slovnik.cz/bin/mld.fpl?vcb=%{query}&dictdir=%{dict}&lines=30&js=0'
 

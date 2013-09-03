@@ -20,7 +20,7 @@ module Dictuby
                     '--list-dicts',
                     'List available dictionaries'
                 ) do |b|
-                    options[:list] = b
+                    options[:list_dicts] = b
                 end
 
                 o.on(
@@ -37,6 +37,30 @@ module Dictuby
                     'Set active dictionary'
                 ) do |d| 
                     options[:set] = d
+                end
+
+                o.on(
+                    '-a',
+                    '--list-sources',
+                    'List available sources'
+                ) do |b|
+                    options[:list_sources] = b
+                end
+
+                o.on(
+                    '-e SOURCE_NAME',
+                    '--enable-source SOURCE_NAME',
+                    'Enable source with specified name'
+                ) do |s| 
+                    options[:enable] = s
+                end
+
+                o.on(
+                    '-d SOURCE_NAME',
+                    '--disable-source SOURCE_NAME',
+                    'Enable source with specified name'
+                ) do |s| 
+                    options[:disable] = s
                 end
                 o.on('QUERY') {}
                 o.parse!

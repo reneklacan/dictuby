@@ -18,13 +18,13 @@ Synopsis
 Installation
 ------------
 
-gem install dictuby
+    gem install dictuby
 
 or
 
-git clone https://github.com/simpliplant/dictuby.git
-cd dictuby
-gem build dictuby.gemspec
+    git clone https://github.com/simpliplant/dictuby.git
+    cd dictuby
+    gem build dictuby.gemspec
     gem install dictuby-0.0.9.gem
 
 

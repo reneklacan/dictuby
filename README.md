@@ -1,7 +1,7 @@
 Dictuby
 =======
 
-Command line online dictionary tool written in ruby
+Command line online dictionary tool written in Ruby
 
 Synopsis
 
@@ -10,17 +10,21 @@ Synopsis
     -l, --list-dicts                 List available dictionaries
     -g, --get-dict                   Display current active dictionary
     -s, --set-dict DICTIONARY        Set active dictionary
+    -a, --list-sources               List available sources
+    -e, --enable-source SOURCE_NAME  Enable source with specified name
+    -d, --disable-source SOURCE_NAME Enable source with specified name
+
 
 Installation
 ------------
 
-    gem install dictuby
+gem install dictuby
 
 or
 
-    git clone https://github.com/simpliplant/dictuby.git
-    cd dictuby
-    gem build dictuby.gemspec
+git clone https://github.com/simpliplant/dictuby.git
+cd dictuby
+gem build dictuby.gemspec
     gem install dictuby-0.0.9.gem
 
 

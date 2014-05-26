@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
     s.name        = 'dictuby'
-    s.version     = '0.0.9'
-    s.date        = '2013-09-03'
+    s.version     = '0.1.0'
+    s.date        = '2014-05-26'
     s.summary     = 'Command line dictionary'
     s.description = 'Command line online dictionary tool written in Ruby'
     s.authors     = ['Rene Klacan']
-    s.email       = 'rene.klacan@gmail.com'
+    s.email       = 'rene@klacan.sk'
     s.files       = [
         'lib/dictuby.rb',
         'lib/dictuby/string.rb',
@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
         'lib/dictuby/runner.rb',
     ]
     s.executables = ['dictuby']
-    s.homepage    = 'https://github.com/simpliplant/dictuby'
+    s.homepage    = 'https://github.com/reneklacan/dictuby'
     s.license     = 'MIT'
 end
